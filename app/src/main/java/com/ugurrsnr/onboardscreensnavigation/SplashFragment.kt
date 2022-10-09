@@ -1,5 +1,6 @@
 package com.ugurrsnr.onboardscreensnavigation
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import androidx.fragment.app.Fragment
@@ -19,10 +20,21 @@ class SplashFragment : Fragment() {
 
 
         Handler().postDelayed({
-            findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToViewPagerFragment())
+
+            if ( onBoardingFinished()){
+                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToHomeFragment())
+            }else {
+                findNavController().navigate(SplashFragmentDirections.actionSplashFragmentToViewPagerFragment())
+
+            }
         },2000)
 
         return inflater.inflate(R.layout.fragment_splash, container, false)
+    }
+
+    private fun onBoardingFinished() : Boolean{
+        val sharedPref= requireActivity().getSharedPreferences("onBoarding", Context.MODE_PRIVATE)
+        return sharedPref.getBoolean("Finished", false)
     }
 
 

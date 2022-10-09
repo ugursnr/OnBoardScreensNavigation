@@ -10,7 +10,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.ugurrsnr.onboardscreensnavigation.R
 import com.ugurrsnr.onboardscreensnavigation.databinding.FragmentSecondBinding
 
-class SecondFragment : Fragment() {
+class SecondScreen : Fragment() {
 
     private var _binding :FragmentSecondBinding? = null
     private val binding get() = _binding!!

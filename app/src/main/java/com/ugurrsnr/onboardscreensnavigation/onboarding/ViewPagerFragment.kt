@@ -5,12 +5,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.viewpager.widget.ViewPager
-import com.ugurrsnr.onboardscreensnavigation.R
 import com.ugurrsnr.onboardscreensnavigation.databinding.FragmentViewPagerBinding
-import com.ugurrsnr.onboardscreensnavigation.onboarding.screens.FirstFragment
-import com.ugurrsnr.onboardscreensnavigation.onboarding.screens.SecondFragment
-import com.ugurrsnr.onboardscreensnavigation.onboarding.screens.ThirdFragment
+import com.ugurrsnr.onboardscreensnavigation.onboarding.screens.FirstScreen
+import com.ugurrsnr.onboardscreensnavigation.onboarding.screens.SecondScreen
+import com.ugurrsnr.onboardscreensnavigation.onboarding.screens.ThirdScreen
 
 
 class ViewPagerFragment : Fragment() {
@@ -25,9 +23,9 @@ class ViewPagerFragment : Fragment() {
         _binding = FragmentViewPagerBinding.inflate(layoutInflater,container,false)
 
         val fragmentList = arrayListOf<Fragment>(
-            FirstFragment(),
-            SecondFragment(),
-            ThirdFragment()
+            FirstScreen(),
+            SecondScreen(),
+            ThirdScreen()
         )
         val adapterM= ViewPagerAdapter(
             fragmentList,

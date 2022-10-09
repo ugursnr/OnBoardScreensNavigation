@@ -11,7 +11,7 @@ import com.ugurrsnr.onboardscreensnavigation.R
 import com.ugurrsnr.onboardscreensnavigation.databinding.FragmentFirstBinding
 
 
-class FirstFragment : Fragment() {
+class FirstScreen : Fragment() {
     private var _binding : FragmentFirstBinding? = null
     private val binding get() = _binding!!
     override fun onCreateView(
